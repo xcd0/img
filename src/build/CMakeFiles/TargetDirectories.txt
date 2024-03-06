@@ -1,0 +1,3 @@
+/home/xcd0/work/img/src/build/CMakeFiles/main.dir
+/home/xcd0/work/img/src/build/CMakeFiles/edit_cache.dir
+/home/xcd0/work/img/src/build/CMakeFiles/rebuild_cache.dir
