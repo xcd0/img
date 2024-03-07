@@ -10,10 +10,14 @@ setup:
 	# echo "export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0" >> ~/.bashrc
 	# も実行する。
 	# windows11の場合何もしなくても動く？
+	# windows11の場合、 export DISPLAY=:0 にしたら表示された。
 	@command -v xeyes || sudo apt-fast install -y --fix-missing x11-apps
 
 build:
 	cd src/ && mkdir -p build && cd build && cmake .. && make
+
+clean:
+	find . -iwholename '*cmake*' -not -name CMakeLists.txt -delete
 
 run:
 	./src/build/main

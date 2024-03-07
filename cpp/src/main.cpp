@@ -2,8 +2,13 @@
 
 #include <opencv2/imgproc.hpp> // cv::Canny
 
-int main() {
-	cv::Mat img = cv::imread("./lena.jpg");
+int main(int argc, char *argv[]) {
+	cv::Mat img;
+	if (argc == 1){
+		img = cv::imread("./lenna.jpg");
+	}else{
+		img = cv::imread(argv[1]);
+	}
 
 	// imgを白黒にしてimg_binに代入
 	cv::Mat img_bin;
